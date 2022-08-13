@@ -144,7 +144,7 @@ class EncoderPin:
         self.prepare_pin()
 
     def prepare_pin(self):
-        if self.pin is not None:
+        if self.pin is not None: # I added this inner if to allow it to see MCP pins
             if self.pin.__class__.__name__ == 'DigitalInOut':
                 self.io = self.pin
             else:
